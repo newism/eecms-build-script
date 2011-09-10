@@ -298,12 +298,12 @@
 			<arg line="add ." />
 		</exec -->
 		<exec executable="git" dir="${dir.theme_publish}" failonerror="true">
-			<arg line="add . -f -u" />
+			<arg line="add -f -A ./" />
 		</exec>
 		<exec executable="git" dir="${dir.templates_publish}" failonerror="true">
-			<arg line="add . -f -u" />
+			<arg line="add -f -A ./" />
 		</exec>
-		<exec executable="git" dir="${dir.build}/config" failonerror="true">
+		<exec executable="git" dir="./${dir.build}/config" failonerror="true">
 			<arg line="add ${build.version.info}" />
 		</exec>
 		<exec executable="git" dir="${dir.templates_publish}" failonerror="true">
